@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si el evento se realiza recurrentemente o por unica vez. Si es recurrente, habilita a completar el campo Frequency</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Se realiza recurrentemente o por única vez?</inlineHelpText>
+    <label>Recurring?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

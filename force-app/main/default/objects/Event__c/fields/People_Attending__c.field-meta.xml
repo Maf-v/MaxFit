@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>People_Attending__c</fullName>
+    <description>Calcula la cantidad de asistentes a partir de ser un campo Roll Up de la relación Master-Detail con el objeto Attendees</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cantidad de asistentes al evento</inlineHelpText>
+    <label># People Attending</label>
+    <summaryForeignKey>Event_Attendee__c.Event__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

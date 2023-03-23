@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evento_No_Acepta_Inscripciones</fullName>
+    <active>true</active>
+    <description>Un presentador solo puede estar asociado a un evento si el mismo tiene como End Date una fecha futura y es Live.</description>
+    <errorConditionFormula>OR (
+Event__r.End_Date_Time__c &lt; DATETIMEVALUE(TODAY ()) ,
+NOT(Event__r.Live__c)
+)</errorConditionFormula>
+    <errorDisplayField>Event__c</errorDisplayField>
+    <errorMessage>Este evento ya no acepta presentadores</errorMessage>
+</ValidationRule>

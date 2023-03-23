@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo lookup que hace referencia al objeto Location correspondiente a este organizador de eventos</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ubicación donde se encuentra el organizador de eventos</inlineHelpText>
+    <label>Location</label>
+    <referenceTo>Location__c</referenceTo>
+    <relationshipLabel>Event Organizers</relationshipLabel>
+    <relationshipName>Event_Organizers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Fecha_Futura</fullName>
+    <active>true</active>
+    <description>La fecha en End Date debe ser al menos 1 dia posterior a la fecha en Start Date</description>
+    <errorConditionFormula>End_Date_Time__c &lt;= (Start_Date_Time__c + 1)</errorConditionFormula>
+    <errorDisplayField>End_Date_Time__c</errorDisplayField>
+    <errorMessage>La fecha End Date debe ser posterior a Start Date</errorMessage>
+</ValidationRule>

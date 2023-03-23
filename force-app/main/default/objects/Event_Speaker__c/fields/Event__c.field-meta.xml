@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event__c</fullName>
+    <description>Campo completado mediante una relación Master-Detail con el objeto Event</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Evento organizado</inlineHelpText>
+    <label>Event</label>
+    <referenceTo>Event__c</referenceTo>
+    <relationshipLabel>Event Speakers</relationshipLabel>
+    <relationshipName>Event_Speakers</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

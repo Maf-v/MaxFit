@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Expone si la ubicación esta verificada mediante callouts a la API SmartyStreets</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica si la ubicación esta verificada o no.</inlineHelpText>
+    <label>Verified</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

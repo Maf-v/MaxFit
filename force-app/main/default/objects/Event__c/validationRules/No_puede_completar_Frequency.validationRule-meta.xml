@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_puede_completar_Frequency</fullName>
+    <active>true</active>
+    <description>Si Recurring? no esta activado, no se puede completar el campo Frequency</description>
+    <errorConditionFormula>AND (
+  NOT( Recurring__c ),
+  NOT( ISBLANK( TEXT(Frequency__c) ) ) 
+)</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>No se puede completar Frequency si Recurring no esta chequeado.</errorMessage>
+</ValidationRule>

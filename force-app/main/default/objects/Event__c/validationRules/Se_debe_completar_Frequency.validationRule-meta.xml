@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Se_debe_completar_Frequency</fullName>
+    <active>true</active>
+    <description>Si el campo Recurring? esta activado, se debe seleccionar un valor del campo Frequency</description>
+    <errorConditionFormula>AND(
+  Recurring__c ,
+  ISBLANK( TEXT( Frequency__c ) ) 
+)</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>Si el campo Recurring? esta activado se debe completar también Frequency</errorMessage>
+</ValidationRule>
