@@ -6,11 +6,11 @@ public class DeleteEventBatch implements Database.Batchable<SObject> {
     }
 
     public void execute(Database.BatchableContext bc, List<Event__c> eventList) {
-        if(!eventList.isEmpty) {
+        if(!eventList.isEmpty()) {
             //Realiza las operacions DML
             List<Database.DeleteResult> drList = Database.delete(eventList);
             //Obtiene los errores de las operaciones DML que fallaron
-            for (Database.DeleteResult dr : eventList) {
+            for (Database.DeleteResult dr : drList) {
                 if(!dr.isSuccess()) {
                     List<Database.Error> errors = dr.getErrors();
                     //Une los errores en un solo String
@@ -28,7 +28,7 @@ public class DeleteEventBatch implements Database.Batchable<SObject> {
         email.setSubject('Events Deleted');
         email.setHtmlBody('El Batch DeleteEventBatch fue completado');
 
-        Messaging.sendEmail(new List<Messaging.SingleEmailMessag>{email});
+        Messaging.sendEmail(new List<Messaging.SingleEmailMessage>{email});
     }
 
 }
