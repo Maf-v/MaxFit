@@ -26,9 +26,9 @@ public class DeleteEventBatch implements Database.Batchable<SObject> {
         Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
         email.setToAddresses(new List<String>{ 'mafsalesforce@gmail.com' });
         email.setSubject('Events Deleted');
-        email.setHtmlBody('El Batch DeleteEventBatch fue completado');
+        email.setPlainTextBody('El Batch DeleteEventBatch fue completado');
+        email.setSenderDisplayName('MaxFit');
 
         Messaging.sendEmail(new List<Messaging.SingleEmailMessage>{email});
     }
-
 }
