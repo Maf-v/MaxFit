@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-m-around_small">
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Event Details">
+                <lightning-record-form
+                record-id={recordId}
+                object-api-name="Event__c"
+                layout-type="Full"
+                columns="2"
+                mode="view"
+                >
+                </lightning-record-form>
+            </lightning-tab>
+            <lightning-tab label="Event Speakers">
+                <c-event-speakers record-id={recordId} ></c-event-speakers>
+            </lightning-tab>
+            <lightning-tab label="Event Location">
+                Three Content !
+            </lightning-tab>
+            <lightning-tab label="Event Attendees">
+                Three Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>
