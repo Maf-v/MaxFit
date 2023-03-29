@@ -1,0 +1,19 @@
+<template>
+    <lightning-record-edit-form 
+    object-api-name={eventObj}
+    onsuccess={handleSuccess}
+    >
+        <lightning-input-field field-name={nameField}></lightning-input-field>
+        <lightning-input-field field-name={eventOrganizerField}></lightning-input-field>
+        <lightning-input-field field-name={startDateTimeField}></lightning-input-field>
+        <lightning-input-field field-name={endDateTimeField}></lightning-input-field>
+        <lightning-input-field field-name={maxSeatsField}></lightning-input-field>
+        <lightning-input-field field-name={eventDetailField}></lightning-input-field>
+        <lightning-button
+            class="slds-m-top_small"
+            type="submit"
+            label="Create new"
+        >
+        </lightning-button>
+    </lightning-record-edit-form>
+</template>
