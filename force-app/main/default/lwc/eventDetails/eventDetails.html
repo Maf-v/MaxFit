@@ -15,10 +15,17 @@
                 <c-event-speakers record-id={recordId} ></c-event-speakers>
             </lightning-tab>
             <lightning-tab label="Event Location">
-                Three Content !
+                <lightning-formatted-address
+                street={street}
+                city={city}
+                country={country}
+                province={state}
+                postal-code={postalCode}
+                >
+                </lightning-formatted-address>
             </lightning-tab>
             <lightning-tab label="Event Attendees">
-                Three Content !
+                <c-event-attendees record-id={recordId}></c-event-attendees>
             </lightning-tab>
         </lightning-tabset>
     </div>
