@@ -1,10 +1,21 @@
 <template>
-    <div style="height: 200px;">
+    <lightning-card title="Proximos Eventos">
+        <div class="slds-m-around_small">
+            <c-search-form 
+            unfiltered-list={eventsList}
+            onnamechange={handleNameChange}
+            ondatechange={handleDateChange}
+            onlocationchange={handleLocationChange}
+            >
+            </c-search-form>
+        </div>
+        <div style="height: 150px;">
         <c-custom-datatable
-        key-field="id"
-        data={eventsList}
-        columns={columns}>
-        >
-        </c-custom-datatable>
-    </div>
+            key-field="id"
+            data={eventsToDisplay}
+            columns={columns}>
+            >
+            </c-custom-datatable>
+        </div>
+    </lightning-card>
 </template>
