@@ -29,11 +29,11 @@ Definir el **modelo de datos** para la organización, creando los objetos necesa
 Además, se deben definir las **reglas de validación** necesarias para garantizar la integridad de los datos, evitando incongruencias y duplicaciones en la base de datos.
 ![data-model](https://user-images.githubusercontent.com/100447235/230621298-8ed2b509-d8bc-43f2-9941-8c8d74c3e665.png)
 
-En cuanto al nivel de acceso y seguridad, se deben configurar los permisos y restricciones necesarios para proteger los datos y garantizar que solo los usuarios autorizados puedan acceder a ellos. Esto implica la creación de **perfiles** y** roles**, así como el uso de** Org-Wide Settings** y **Sharing Rules** para establecer las reglas de acceso adecuadas en función de los distintos niveles de seguridad requeridos.
+En cuanto al nivel de acceso y seguridad, se deben configurar los permisos y restricciones necesarios para proteger los datos y garantizar que solo los usuarios autorizados puedan acceder a ellos. Esto implica la creación de **perfiles** y **roles**, así como el uso de **Org-Wide Settings** y **Sharing Rules** para establecer las reglas de acceso adecuadas en función de los distintos niveles de seguridad requeridos.
 
 ### Requerimiento #2
 ------------
-**Apex Class* TransactionLogHandler***
+**Apex Class *TransactionLogHandler***
 Es responsable de manejar y registrar excepciones en un objeto personalizado llamado *Error_Log__c*, la cual tiene dos métodos: *exceptionHandler* y *exceptionHandlerWithError*, ambos reciben como parámetros una excepción y un nombre de proceso.
 
 ### Requerimiento #3
