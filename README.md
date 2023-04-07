@@ -3,10 +3,10 @@ Utilización de la plataforma Salesforce para el manejo de una empresa destinada
 
 Poniendo en práctica los siguientes tópicos:
 - Modelado de Datos
- - Creación de Objectos y Campos
- -  Reglas de validación
- - Definición de relaciones
- - Org-Wide Settings, Sharing Rules, Perfiles y Roles.
+ 	- Creación de Objectos y Campos
+ 	-  Reglas de validación
+ 	- Definición de relaciones
+ 	- Org-Wide Settings, Sharing Rules, Perfiles y Roles.
 
 - Apex
 	- 	Apex Triggers
@@ -25,7 +25,7 @@ Poniendo en práctica los siguientes tópicos:
 
 ### Requerimiento #1
 ------------
-Definir el **modelo de datos **para la organización, creando los objetos necesarios y definiendo los tipos de datos adecuados para sus campos. Para ello, se deben establecer las **relaciones correspondientes** entre los objetos, asegurando que la estructura de datos sea coherente y eficiente.
+Definir el **modelo de datos** para la organización, creando los objetos necesarios y definiendo los tipos de datos adecuados para sus campos. Para ello, se deben establecer las **relaciones correspondientes** entre los objetos, asegurando que la estructura de datos sea coherente y eficiente.
 Además, se deben definir las **reglas de validación** necesarias para garantizar la integridad de los datos, evitando incongruencias y duplicaciones en la base de datos.
 ![data-model](https://user-images.githubusercontent.com/100447235/230621298-8ed2b509-d8bc-43f2-9941-8c8d74c3e665.png)
 
