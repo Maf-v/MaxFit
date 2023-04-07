@@ -1,5 +1,7 @@
 import { LightningElement, api } from 'lwc';
+import {NavigationMixin} from 'lightning/navigation';
 import getAttendees from '@salesforce/apex/EventDetailController.getAttendees';
+import { encodeDefaultFieldValues } from 'lightning/pageReferenceUtils';
 
 const columns = [
     { label: 'Nombre', fieldName: 'Name', type: 'text' },
@@ -8,7 +10,7 @@ const columns = [
     { label: 'Ubicacion', fieldName: 'Location', cellAttributes: {iconName: "utility:location", iconPosition: "left"}}
 ]
 
-export default class EventAttendees extends LightningElement {
+export default class EventAttendees extends NavigationMixin(LightningElement) {
     @api recordId;
     columns = columns;
     eventAttendeesData;
@@ -29,12 +31,28 @@ export default class EventAttendees extends LightningElement {
                     fieldData.push(eventAttendeeData);
                 });
                 this.eventAttendeesData = fieldData;
-                console.log('Mostrar data: ', this.eventAttendeesData);
             })
             .catch(error => {
                 this.errors = error;
                 this.eventAttendeesData = undefined;
-                console.log('Dio error');
             })
     }
+
+    handleClick() {
+        const defaultValues = encodeDefaultFieldValues({
+            Event__c: this.recordId
+        });
+        
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Event_Attendee__c',
+                actionName: 'new'
+            },
+            state: {
+                defaultFieldValues: defaultValues
+            }
+        })
+    }
+
 }

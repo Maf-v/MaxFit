@@ -1,5 +1,7 @@
 import { LightningElement, api } from 'lwc';
+import {NavigationMixin} from 'lightning/navigation';
 import  getSpeakers  from '@salesforce/apex/EventDetailController.getSpeakers';
+import { encodeDefaultFieldValues } from 'lightning/pageReferenceUtils';
 
 const columns = [
     { label: 'Nombre', fieldName: 'Name', type: 'text' },
@@ -8,7 +10,7 @@ const columns = [
     { label: 'Compania', fieldName: 'Company', type: 'text' },
 ];
 
-export default class EventSpeakers extends LightningElement {
+export default class EventSpeakers extends NavigationMixin(LightningElement) {
     @api recordId;
     columns = columns;
     eventSpeakersData;
@@ -37,6 +39,23 @@ export default class EventSpeakers extends LightningElement {
                 this.errors = error;
                 this.eventSpeakersData = undefined;
             })
+    }
+
+    handleClick() {
+        const defaultValues = encodeDefaultFieldValues({
+            Event__c: this.recordId
+        });
+
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                objectApiName: 'Event_Speaker__c',
+                actionName: 'new'
+            },
+            state: {
+                defaultFieldValues: defaultValues
+            }
+        })
     }
 
 }
